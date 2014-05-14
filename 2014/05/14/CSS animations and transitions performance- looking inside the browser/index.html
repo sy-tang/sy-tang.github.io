@@ -8,7 +8,8 @@
   
   <meta name="description" content="原文链接: CSS animations and transitions performance: looking inside the browser
 
-你可能已经在一些项目中使用过CSS Animations 或者CSS Transitions（如果没有，可以到CSS-Trick上查阅相关的资料">
+你可能已经在一些项目中使用过CSS Animations 或者CSS Transitions（如果没有，可以到CSS-Trick上查阅相关的资料：animations&amp;amp;transitions）你所做的一些动画可能是平滑的，但其中有一部分可能会很不连贯。你想知道为什么吗？
+在本文中，我们将探讨浏览器怎么处理 CSS Animations以及Transitions，这样在你编写任何代码之前，就可以大概知道一个动画是否能表现得很流畅！有了这种直觉，你就能够作出适应浏览器的设计，创造如丝般顺滑的用户体验。">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -97,6 +98,8 @@
 </blockquote>
 <p>你可能已经在一些项目中使用过CSS Animations 或者CSS Transitions（如果没有，可以到CSS-Trick上查阅相关的资料：<a href="http://css-tricks.com/almanac/properties/a/animation/" target="_blank">animations</a>&amp;<a href="http://css-tricks.com/almanac/properties/t/transition/" target="_blank">transitions</a>）你所做的一些动画可能是平滑的，但其中有一部分可能会很不连贯。你想知道为什么吗？</p>
 <p>在本文中，我们将探讨浏览器怎么处理 CSS Animations以及Transitions，这样在你编写任何代码之前，就可以大概知道一个动画是否能表现得很流畅！有了这种直觉，你就能够作出适应浏览器的设计，创造如丝般顺滑的用户体验。</p>
+<a id="more"></a>
+
 <h2 id="浏览器内部">浏览器内部</h2>
 <p>让我们打开浏览器的引擎盖，四处看看。一旦我们理解它是如何工作的，我们就可以更好的驾驭它。</p>
 <p>现代的浏览器通常会有两个重要的执行线程，这2个线程协同工作来渲染一个网页：</p>
