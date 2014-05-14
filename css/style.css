@@ -300,6 +300,7 @@ article .entry p {
   margin: 20px 0;
   font-size: 16px;
   line-height: 25px;
+  text-indent: 0;
 }
 article .entry blockquote {
   border-top: 1px solid #ddd;
@@ -307,8 +308,8 @@ article .entry blockquote {
   font-style: italic;
   font-family: "Georgia", serif;
   font-size: 1.2em;
-  padding: 0 30px 15px;
-  text-align: center;
+  padding: 0 30px;
+  text-align: left;
 }
 article .entry blockquote footer {
   border-top: none;
@@ -356,7 +357,7 @@ article .entry pre code {
 article .entry ul,
 article .entry ol,
 article .entry dl {
-  margin-left: 20px;
+  margin-left: 50px;
 }
 article .entry ul ul,
 article .entry ol ul,
@@ -371,8 +372,8 @@ article .entry dl dl {
 }
 article .entry h1,
 article .entry h2 {
-  padding-bottom: 10px;
-  margin-top: 20px;
+  margin-top: 30px;
+  font-weight: bold;
 }
 article .entry img,
 article .entry video {
@@ -488,6 +489,7 @@ article footer .tags {
 #cover {
   height: 250px;
   background: #f9f9f9;
+  color: white;
   text-align: center;
   center: fixed;
   -moz-background-size: cover;
@@ -502,7 +504,7 @@ article footer .tags {
 }
 #cover #profile a {
   font-size: 18px;
-  color: #333;
+  color: white;
   text-transform: uppercase;
 }
 #cover #profile .logo {
