@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="utf-8">
+    <title>iconfont测试</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1407909504_974445.css" />
+    <style>
+        .iconfont {
+            font-size: 55px;
+            margin: 10px auto 20px;
+            display: inline-block;
+        }
+        .iconfont:before {
+            color: grey;
+        }
+        .iconfont.clicked:before {
+            color: red;
+        }
+
+    </style>
+<body>
+    <div id="main">
+        <h3>iconfont测试</h3>
+        <div class="iconfont icon-play"></div>
+        <div class="iconfont icon-pause"></div>
+        <div class="iconfont icon-share"></div>
+        <div class="iconfont icon-digg"></div>
+        <div class="iconfont icon-mic"></div>
+    </div>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
+    <script type="text/javascript">
+        $('.iconfont').on('click', function() {
+            $(this).toggleClass('clicked');
+        });
+    </script>
+
+</body>
+</html>
