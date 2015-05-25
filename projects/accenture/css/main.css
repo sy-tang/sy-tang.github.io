@@ -209,6 +209,140 @@ p {
     margin-left: -25%;
 }
 
+/* tags */
+.tag {
+    position: absolute;
+}
+
+.tag1 {
+    top: 37.5%;
+    left: 12.2%;
+}
+.tag2 {
+    top: 37.5%;
+    left: 64.3%;
+}
+.tag3 {
+    top: 55.5%;
+    left: 78.6%;
+}
+.tag4 {
+    top: 76.5%;
+    left: 44%;
+}
+.tag5 {
+    top: 62.5%;
+    left: 12.2%;
+}
+.tag6 {
+    top: 37.5%;
+    left: 12.2%;
+}
+
+.tagAnimation {
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    top: 5px
+}
+
+.animationContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 17px;
+    height: 17px
+}
+
+.black1,.black2 {
+    position: relative;
+    background: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: .6;
+    display: inline-block
+}
+
+.brand-bg {
+    position: relative;
+    top: 10px;
+    display: block;
+    margin: -7px 0 0 2px;
+    background-image: url(../img/icon_brand-895220.png);
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    -webkit-background-size: 15px 15px;
+    background-size: 15px 15px;
+    -webkit-animation: brand 1.95s infinite
+}
+
+@-webkit-keyframes brand {
+    0% {
+        -webkit-transform: scale(.8,.8)
+    }
+
+    10% {
+        -webkit-transform: scale(1.25,1.25)
+    }
+
+    100%,20% {
+        -webkit-transform: scale(1,1)
+    }
+}
+
+.black1 {
+    -webkit-animation: blackFirst 1.95s infinite
+}
+
+@-webkit-keyframes blackFirst {
+    0% {
+        -webkit-transform: scale(.03,.03)
+    }
+
+    20% {
+        -webkit-transform: scale(.03,.03);
+        opacity: 1
+    }
+
+    66% {
+        -webkit-transform: scale(1,1);
+        opacity: .05
+    }
+
+    100%,67% {
+        -webkit-transform: scale(.03,.03)
+    }
+}
+
+.black2 {
+    -webkit-animation: blackSecond 1.95s infinite
+}
+
+@-webkit-keyframes blackSecond {
+    0% {
+        -webkit-transform: scale(.03,.03)
+    }
+
+    44% {
+        -webkit-transform: scale(.03,.03);
+        opacity: 1
+    }
+
+    90% {
+        -webkit-transform: scale(1,1);
+        opacity: .05
+    }
+
+    100%,91% {
+        -webkit-transform: scale(.03,.03)
+    }
+}
+
+
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
