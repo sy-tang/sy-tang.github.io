@@ -188,7 +188,7 @@ p {
 .nav_btn {
     width: 64px;
     height: 24px;
-    background: url(img/nav_btn.png);
+    background: url(../img/nav_btn.png);
     background-size: 64px;
     top: 2%;
     left: 3%;
@@ -196,7 +196,7 @@ p {
 .slide_btn {
     width: 64px;
     height: 36px;
-    background: url(img/slide_btn.png);
+    background: url(../img/slide_btn.png);
     background-size: 64px;
     bottom: 15px;
     left: 50%;
