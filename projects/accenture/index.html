@@ -427,19 +427,17 @@
              }
         });
 
-        navBtn.on("click", function() {
+        navBtn.on("tap", function() {
             runPage.go(1);
         });
 
-        $(".nav_anchor").on("click", function() { 
+        $(".nav_anchor").on("tap", function() { 
             var page = parseInt($(this).data("page"));
-            alert(page);
-
-            runPage.go(page);
+            // runPage.go(page);
             return false;
         });
 
-        $(".start_btn").on("click", function() {
+        $(".start_btn").on("tap", function() {
             runPage.next();
         })
 
