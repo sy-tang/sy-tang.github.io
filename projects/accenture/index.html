@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="Description...">
     <meta name="keywords" content="keyword1,keyword2,keyword3..">
-
+    <link rel="stylesheet" href="animate.css">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <style type="text/css">
         html {
@@ -46,6 +46,7 @@
         	display: none;
         	position: relative;
         	z-index: 0;
+            overflow: hidden;
         }
         .contain img {
             display: block;
@@ -96,25 +97,30 @@
         .page .title {
             width: auto;
             height: 85px;
-            margin: 50px auto;
+            margin: 10% auto;
         }
 
         .page_start .content {
             position: absolute;
-            bottom: 0;
+            bottom: -5%;
             left: 50%;
             margin-left: -50%;
         }
+
         .page_start .title,
         .page_catelog .title {
-            width: 330px;
+            width: 80%;
             height: auto;
-            margin: 50px auto 10px;
+            margin: 10% auto 10px;
         }
 
         .page_start .logo {
             width: 130px;
             margin: 0 auto;
+        }
+
+        .page_catelog .content {
+            margin-top: 10%;
         }
         .page_catelog .nav {
             position: relative;
@@ -123,7 +129,7 @@
             position: absolute;
             width: 28%;
             height: 26%;
-            border: 1px solid #ccc;
+            /*border: 1px solid #ccc;*/
             
         }
         .page_catelog .anchor1 {
@@ -185,7 +191,7 @@
             transform: rotate(360deg) translate(0,-200px) scale(.3);
             opacity: 0;
         }
-        .nav_btn, .slide_btn {
+        .nav_btn, .slide_btn, .start_btn {
             position: absolute;
             z-index: 10;
         }
@@ -202,10 +208,117 @@
             height: 36px;
             background: url(img/slide_btn.png);
             background-size: 64px;
-            bottom: 30px;
+            bottom: 15px;
             left: 50%;
             margin-left: -32px;
         }
+        .start_btn {
+            width: 50%;
+            bottom: 10%;
+            left: 50%;
+            margin-left: -25%;
+        }
+    
+        .page_start .content,
+        .page_start .title {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+            -webkit-animation-duration: 2s;
+        }
+
+        .page_start .title {
+            -webkit-animation-name: fadeInUpBig;
+            animation-name: fadeInUpBig;
+        }
+
+        @-webkit-keyframes fadeInUp {
+          0% {
+            opacity: 0.3;
+            -webkit-transform: translate3d(0, 5%, 0);
+            transform: translate3d(0, 5%, 0);
+          }
+
+          100% {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+          }
+        }
+
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0.3;
+            -webkit-transform: translate3d(0, 5%, 0);
+            transform: translate3d(0, 5%, 0);
+          }
+
+          100% {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+          }
+        }
+
+
+        @-webkit-keyframes fadeInUpBig {
+          0% {
+            opacity: 1;
+            -webkit-transform: translate3d(0%, 500px, 0);
+            transform: translate3d(0, 35%, 0);
+          }
+
+          100% {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+          }
+        }
+
+        @keyframes fadeInUpBig {
+          0% {
+            opacity: 1;
+            -webkit-transform: translate3d(0, 500px, 0);
+            transform: translate3d(0, 35%, 0);
+          }
+
+          100% {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+          }
+        }
+
+
+        .page_start .logo,
+        .page_start .start_btn {
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-delay: 1s;
+        }
+
+        @-webkit-keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+
+          100% {
+            opacity: 1;
+          }
+        }
+
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+
+          }
+
+          100% {
+            opacity: 1;
+          }
+        }
+
+
     </style>
   </head>
   <body>
@@ -213,21 +326,22 @@
         <div class="nav_btn"></div>
         <div class="slide_btn"></div>
     </div>
+     
     <div id="pageContain">
-        
-    	<div class="page page_start current">
-	        <div class="contain">
-                <img class="title" src="img/main_title.png" alt="">
-                <img class="logo" src="img/logo.png" alt="">
-	            <img class="content" src="img/page_start.png"/>
-	        </div>
-	    </div>  
+    	 <div class="page page_start">
+            <div class="contain">
+                <img class="title animated" src="img/main_title.png" alt="">
+                <img class="logo animated" src="img/logo.png" alt="">
+                <img class="content animated " src="img/page_start.png"/>
+                <img class="start_btn animated " src="img/start_btn.png"/>
+            </div>
+        </div>
 	    <div class="page page_catelog">
 	        <div class="contain">
                 <img class="title" src="img/main_title.png" alt="">
                 <div class="nav">
                     <img class="content" src="img/page_nav.png"/>
-                    <a class="nav_anchor anchor1" data-page="2"></a>
+                    <a class="nav_anchor anchor1" data-page="2" href="#"></a>
                     <a class="nav_anchor anchor2" id="test" data-page="6"></a>
                     <a class="nav_anchor anchor3" data-page="3"></a>
                     <a class="nav_anchor anchor4" data-page="5"></a>
@@ -277,7 +391,7 @@
     <script type="text/javascript" src="js/zepto.min.js"></script>
     <script type="text/javascript" src="js/fullPage.min.js"></script>
     <script type="text/javascript">
-        
+
         var ctlBtns = $(".fixed_block"), navBtn = $(".nav_btn");
 
         var runPage;
@@ -297,10 +411,10 @@
                 },                           
             mode : 'wheel,touch',               // mode of fullpage
             easing : 'ease'                                // easing('ease','ease-in','ease-in-out' or use cubic-bezier like [.33, 1.81, 1, 1];
-             // ,onSwipeStart : function(index, thisPage) {   // callback before pageChange
-             //    if (index == 1)
-             //        return 'stop';
-             // }
+             ,onSwipeStart : function(index, thisPage) {   // callback before pageChange
+                if (index < 2)
+                    return 'stop';
+             }
             //  ,beforeChange : function(index, thisPage) {   // callback before pageChange
             //    return 'stop';
             //  }
@@ -319,8 +433,16 @@
 
         $(".nav_anchor").on("click", function() { 
             var page = parseInt($(this).data("page"));
+            alert(page);
+
             runPage.go(page);
+            return false;
         });
+
+        $(".start_btn").on("click", function() {
+            runPage.next();
+        })
+
 
     </script>
   </body>
