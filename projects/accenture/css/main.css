@@ -56,7 +56,7 @@ body {
 	margin: 0 auto;
 }
 .page_end .content {
-    margin: 12% auto;
+    margin: 10% auto;
 }
 .current .contain, .slide .contain {
 	display: block;
@@ -160,7 +160,7 @@ body {
     height: 24%;        
 }
 
-.nav_btn, .slide_btn, .start_btn {
+.nav_btn, .slide_btn, .start_btn, .download_btn {
     position: absolute;
     z-index: 10;
 }
@@ -169,6 +169,15 @@ body {
     height: 48px;
     background: url(../img/nav_btn_white.png) no-repeat center center;
     background-size: 60px;
+}
+.download_btn {
+    width: 193px;
+    height: 46px;
+    background: url(../img/download_btn.png) no-repeat center center;
+    background-size: 193px;
+    bottom: 65px;
+    left: 50%;
+    margin-left: -96px;
 }
 .slide_btn {
     width: 64px;
