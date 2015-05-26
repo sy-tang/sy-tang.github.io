@@ -221,7 +221,7 @@ body {
     width: 17px;
     height: 17px;
     position: absolute;
-    top: 5px
+    top: 5px;
 }
 
 .animationContainer {
@@ -320,7 +320,7 @@ body {
 }
 
 .tagContent {
-    display: none;
+    /*display: none;*/
     color: #595757;
     font-size: 12px;
     background: white;
@@ -328,6 +328,20 @@ body {
     padding: 4px 6px;
     border-radius: 4px;
     position: relative;
+    opacity: 0;
+    -webkit-transform: scale(.6 ,.6);
+    transition: all .8s ease;
+    transform-origin: 0% 100%;
+}
+
+.rightTag .tagContent {
+    transform-origin: 100% 100%;
+}
+
+.showing .tagContent {
+    /*display: block;*/
+    opacity: 1;
+    -webkit-transform: scale(1 ,1);
 }
 
 .tagContent:before, .tagContent:after {
@@ -363,9 +377,7 @@ body {
     border-left: 16px solid transparent;
 }
 
-.showing .tagContent {
-    display: block;
-}
+
 
 .tag1 .tagContent {
     top: -30px;
