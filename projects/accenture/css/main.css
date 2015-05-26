@@ -329,19 +329,23 @@ body {
     border-radius: 4px;
     position: relative;
     opacity: 0;
+    transform: scale(.6 ,.6);
     -webkit-transform: scale(.6 ,.6);
     transition: all .8s ease;
+    -webkit-transition: all .8s ease;
     transform-origin: 0% 100%;
     -webkit-transform-origin: 0% 100%;
 }
 
 .rightTag .tagContent {
     transform-origin: 100% 100%;
+    -webkit-transform-origin: 100% 100%;
 }
 
 .showing .tagContent {
     /*display: block;*/
     opacity: 1;
+    transform: scale(1 ,1);
     -webkit-transform: scale(1 ,1);
 }
 
