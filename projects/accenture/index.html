@@ -45,50 +45,60 @@
                 <img class="title" src="img/page_title_01.png" alt="">
 	            <img class="content" src="img/page_01.png"/>
                 <div class="tags">
-                    <div class="tag tag1">
+                    <div class="tag tag1 leftTag">
                         <div class="tagAnimation">
                             <div class="animationContainer"><span class="black1"></span></div>
                             <div class="animationContainer"><span class="black2"></span></div>
-                            <div class="animationContainer"><span class="brand-bg"></span>
+                            <div class="animationContainer"><span class="tag_icon"></span>
                             </div>
                         </div>
-                        <div class="tagContent"></div>
+                        <div class="tagContent">
+                            <p>增强消费者对个性化体验的认同感</p>
+                        </div>
                     </div>
-                    <div class="tag tag2">
+                    <div class="tag tag2 rightTag">
                         <div class="tagAnimation">
                             <div class="animationContainer"><span class="black1"></span></div>
                             <div class="animationContainer"><span class="black2"></span></div>
-                            <div class="animationContainer"><span class="brand-bg"></span>
+                            <div class="animationContainer"><span class="tag_icon"></span>
                             </div>
                         </div>
-                        <div class="tagContent"></div>
+                        <div class="tagContent">
+                            <p>将认同感转化为切实价值</p>
+                        </div>
                     </div>
-                    <div class="tag tag3">
+                    <div class="tag tag3 rightTag">
                         <div class="tagAnimation">
                             <div class="animationContainer"><span class="black1"></span></div>
                             <div class="animationContainer"><span class="black2"></span></div>
-                            <div class="animationContainer"><span class="brand-bg"></span>
+                            <div class="animationContainer"><span class="tag_icon"></span>
                             </div>
                         </div>
-                        <div class="tagContent"></div>
+                        <div class="tagContent">
+                            <p>保护用户数据，<br/>提升消费者的信任度</p>
+                        </div>
                     </div>
-                    <div class="tag tag4">
+                    <div class="tag tag4 leftTag">
                         <div class="tagAnimation">
                             <div class="animationContainer"><span class="black1"></span></div>
                             <div class="animationContainer"><span class="black2"></span></div>
-                            <div class="animationContainer"><span class="brand-bg"></span>
+                            <div class="animationContainer"><span class="tag_icon"></span>
                             </div>
                         </div>
-                        <div class="tagContent"></div>
+                        <div class="tagContent">
+                            <p>发展更多数字化<br/>生态系统中的伙伴关系</p>
+                        </div>
                     </div>
-                    <div class="tag tag5">
+                    <div class="tag tag5 leftTag">
                         <div class="tagAnimation">
                             <div class="animationContainer"><span class="black1"></span></div>
                             <div class="animationContainer"><span class="black2"></span></div>
-                            <div class="animationContainer"><span class="brand-bg"></span>
+                            <div class="animationContainer"><span class="tag_icon"></span>
                             </div>
                         </div>
-                        <div class="tagContent"></div>
+                        <div class="tagContent">
+                            <p>消费者个性化体验成为<br/>企业竞争力基础</p>
+                        </div>
                     </div>
                 </div>
 	        </div>
@@ -166,6 +176,8 @@
              }
         });
 
+        runPage.go(2);
+
         navBtn.on("click", function() {
             runPage.go(1);
         });
@@ -178,7 +190,12 @@
 
         $(".start_btn").on("click", function() {
             runPage.next();
-        })
+        });
+
+        $("#pageContain").on("click", ".tag", function() {
+            $(".tag.showing").removeClass("showing");
+            $(this).addClass("showing");
+        });
 
 
     </script>
