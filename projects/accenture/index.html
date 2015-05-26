@@ -46,6 +46,7 @@
 	            <img class="content" src="img/page_01.png"/>
                 <div class="tags">
                     <div class="tag tag1 leftTag">
+                        <div class="tapBlock"></div>
                         <div class="tagAnimation">
                             <div class="animationContainer"><span class="black1"></span></div>
                             <div class="animationContainer"><span class="black2"></span></div>
@@ -57,6 +58,7 @@
                         </div>
                     </div>
                     <div class="tag tag2 rightTag">
+                        <div class="tapBlock"></div>
                         <div class="tagAnimation">
                             <div class="animationContainer"><span class="black1"></span></div>
                             <div class="animationContainer"><span class="black2"></span></div>
@@ -68,6 +70,7 @@
                         </div>
                     </div>
                     <div class="tag tag3 rightTag">
+                        <div class="tapBlock"></div>
                         <div class="tagAnimation">
                             <div class="animationContainer"><span class="black1"></span></div>
                             <div class="animationContainer"><span class="black2"></span></div>
@@ -79,6 +82,7 @@
                         </div>
                     </div>
                     <div class="tag tag4 leftTag">
+                        <div class="tapBlock"></div>
                         <div class="tagAnimation">
                             <div class="animationContainer"><span class="black1"></span></div>
                             <div class="animationContainer"><span class="black2"></span></div>
@@ -90,6 +94,7 @@
                         </div>
                     </div>
                     <div class="tag tag5 leftTag">
+                        <div class="tapBlock"></div>
                         <div class="tagAnimation">
                             <div class="animationContainer"><span class="black1"></span></div>
                             <div class="animationContainer"><span class="black2"></span></div>
@@ -192,9 +197,9 @@
             runPage.next();
         });
 
-        $("#pageContain").on("click", ".tag", function() {
+        $("#pageContain").on("click", ".tag .tapBlock", function() {
             $(".tag.showing").removeClass("showing");
-            $(this).addClass("showing");
+            $(this).parent().addClass("showing");
         });
 
 
