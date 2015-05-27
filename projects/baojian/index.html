@@ -59,6 +59,7 @@
     </div>
     
     <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/fastclick.min.js"></script>
     <script type="text/javascript" src="js/fullPage.min.js"></script>
     <script type="text/javascript">
 
@@ -66,9 +67,13 @@
             $("#pageContain").show();
         });
 
-        var ctlBtns = $(".fixed_block"), navBtn = $(".nav_btn");
+        if ('addEventListener' in document) {
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        }
 
-        var pages = $(".page"), runPage, swipeEnable = false;
+        var runPage;
 
         runPage = new FullPage({
 
@@ -96,12 +101,7 @@
             //    return 'stop';
             //  }
              ,callback : function(index, thisPage) {       // callback when pageChange
-               if (index > 1) {
-                    ctlBtns.show();
-               } else {
-                    ctlBtns.hide();
-               }
-               swipeEnable = false;
+               
              }
         });
 
