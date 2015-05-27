@@ -316,11 +316,15 @@ body {
   left: 52.5%;
 }
 .page2 .tag4 {
-  top: 34.5%;
-  left: 64%;
+    top: 29.5%;
+  left: 89%;
+}
+.page2 .tag4 .tagContent {
+    margin-left: -167%%;
+    left: -42%;
 }
 .page2 .tag5 {
-    top: 79.5%;
+    top: 67.5%;
   left: 47%;
 }
 .page3 .tag1 {
@@ -386,7 +390,7 @@ body {
     height: 48px;
     top: -12px;
     left: -12px;
-    z-index: 99;
+    z-index: 1000;
 }
 
 .tagAnimation {

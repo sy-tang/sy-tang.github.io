@@ -193,13 +193,30 @@ body {
     width: 100%;
 }
 
-.page_response .content .hint {
+.page_response .text_wrap {
     position: absolute;
-    padding: 10px 12%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.page_response .content .hint {
+    padding: 0 12%;
     color: #898989;
     font-size: 14px;
-    top: 21%;
     font-weight: normal;
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: -7%;
+}
+
+.page_response .text_wrap:before {
+    content: "";
+    height: 100%;
+    vertical-align: middle;
+    visibility: hidden;
+    display: inline-block;
 }
 
 .page_response .return_btn,

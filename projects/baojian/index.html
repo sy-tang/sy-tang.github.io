@@ -212,7 +212,7 @@
             <img src="img/score_200.png" alt="" class="score_icon score_200">
             <img src="img/score_50.png" alt="" class="score_icon score_50">
             <img src="img/score_0.png" alt="" class="score_icon score_0">
-            <p class="hint"></p>
+            <div class="text_wrap"><p class="hint"></p></div>
             <div class="return_btn">返回重新选</div>
             <div class="next_btn">下一题</div>
             <div class="finish_btn">查看收益</div>
@@ -241,7 +241,7 @@
             continuous : false,                            // create an infinite feel with no endpoints
             effect : {                                     // slide effect
                     transform : {
-                        translate : 'none',                   // 'X'|'Y'|'XY'|'none'
+                        translate : 'Y',                   // 'X'|'Y'|'XY'|'none'
                         scale : [1, 1],                   // [scalefrom, scaleto]
                         rotate : [0, 0]                    // [rotatefrom, rotateto]
                     },
