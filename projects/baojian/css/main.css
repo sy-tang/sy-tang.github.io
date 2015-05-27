@@ -183,7 +183,7 @@ body {
 }
 
 .page_response .content {
-    width: 80%;
+    width: 90%;
     text-align: center;
     margin: 40% auto 0;
     position: relative;
@@ -204,9 +204,9 @@ body {
 .page_response .return_btn,
 .page_response .next_btn,
 .page_response .finish_btn {
-    width: 30%;
+    width: 40%;
     top: 64%;
-    left: 32%;
+    left: 27%;
     padding: 10px;
     position: absolute;
     color: #64C4D0;
