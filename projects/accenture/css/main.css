@@ -56,7 +56,7 @@ body {
 	margin: 0 auto;
 }
 .page_end .content {
-    margin: 8% auto;
+    margin: 5% auto;
 }
 .current .contain, .slide .contain {
 	display: block;
@@ -102,7 +102,7 @@ body {
 }
 
 .page_end .title {
-    margin: 12% auto 0;
+    margin: 18% auto 0;
 }
 
 .page_start .content {
