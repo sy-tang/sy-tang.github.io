@@ -448,11 +448,11 @@
             mode : 'wheel,touch',               // mode of fullpage
             easing : 'ease'                                // easing('ease','ease-in','ease-in-out' or use cubic-bezier like [.33, 1.81, 1, 1];
              ,onSwipeStart : function(index, thisPage) {   // callback before pageChange
-                // if (!swipeEnable)
-                //     return 'stop';
-                if (index < 2) {
-                    return "stop";
-                }
+                if (!swipeEnable)
+                    return 'stop';
+                // if (index < 2) {
+                //     return "stop";
+                // }
              }
             //  ,beforeChange : function(index, thisPage) {   // callback before pageChange
             //    return 'stop';
@@ -463,7 +463,7 @@
                } else {
                     ctlBtns.hide();
                }
-               // swipeEnable = false;
+               swipeEnable = false;
              }
         });
 
@@ -502,6 +502,7 @@
             var page = pages.eq(runPage.thisPage());
             page.find(".contain").eq(0).addClass("hide");
             page.find(".contain").eq(1).removeClass("hide");
+            swipeEnable = true;
         });
 
 
