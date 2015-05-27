@@ -101,6 +101,10 @@ body {
     margin: 5% auto;
 }
 
+.page_end .title {
+    margin: 12% auto 0;
+}
+
 .page_start .content {
     position: absolute;
     bottom: -5%;
@@ -170,6 +174,10 @@ body {
     background: url(../img/nav_btn_white.png) no-repeat center center;
     background-size: 60px;
 }
+.page5 .nav_btn,
+.page_end .nav_btn {
+    background-image: url(../img/nav_btn_grey.png);
+}
 .download_btn {
     width: 193px;
     height: 46px;
@@ -190,6 +198,9 @@ body {
     -webkit-animation: move-up 1.5s infinite linear;
   -o-animation: move-up 1.5s infinite linear;
   animation: move-up 1.5s infinite linear;
+}
+.page5 .slide_btn {
+    background-image: url(../img/slide_btn_grey.png);
 }
 
 @-webkit-keyframes move-up {
