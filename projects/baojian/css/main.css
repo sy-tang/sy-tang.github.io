@@ -183,23 +183,85 @@ body {
 }
 
 .page_response .content {
-    width: 100%;
-    margin-top: 40%;
+    width: 80%;
+    text-align: center;
+    margin: 40% auto 0;
+    position: relative;
 }
 
-.page_result .return_btn,
-.page_response .return_btn {
+.page_response .content img {
+    width: 100%;
+}
+
+.page_response .content .hint {
+    position: absolute;
+    padding: 10px 12%;
+    color: #898989;
+    font-size: 14px;
+    top: 21%;
+}
+
+.page_response .return_btn,
+.page_response .next_btn,
+.page_response .finish_btn {
+    width: 30%;
+    top: 64%;
+    left: 32%;
+    padding: 10px;
+    position: absolute;
+    color: #64C4D0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.page_response .return_btn,
+.page_response .finish_btn  {
+    display: none;
+}
+
+.page_response.negative .next_btn,
+.page_response.finished .next_btn {
+    display: none;
+}
+
+.page_response.negative .return_btn {
+    display: block;
+}
+
+.page_response.finished .finish_btn {
+    display: block;
+}
+
+.page_result .replay_btn {
+    position: absolute;
+    width: 30%;
+    height: 13%;
+    top: 58%;
+    left: 35%;
+    /*border: 1px solid #ccc;*/
+}
+.page_result a {
+    position: absolute;
     width: 30%;
     height: 10%;
-    top: 43%;
-    left: 35%;
-    position: absolute;
-}
-
-.page_result .return_btn {
-    height: 13%;
-  top: 58%;
+    bottom: 10%;
+    left: 13%;
     /*border: 1px solid #ccc;*/
+}
+.page_result .link2 {
+    left: 56%;
+}
+.page_result .content {
+    display: none;
+}
+.page_result.low_score .result_low {
+    display: block;
+}
+.page_result.middle_score .result_middle {
+    display: block;
+}
+.page_result.high_score .result_high {
+    display: block;
 }
 
 .page_start .start_btn {
