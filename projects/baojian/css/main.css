@@ -58,7 +58,7 @@ body {
 }
 .contain .question_no {
     width: 175px;
-    margin: 20px auto;
+    margin: 15px auto 10px;
     padding-right: 20px;
 }
 .page_end .content {
