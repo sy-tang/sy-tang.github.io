@@ -256,8 +256,16 @@ body {
     height: 35px;
     width: auto;
     top: 34%;
-    left: 26%;
+    left: 50%;
+    margin-left: -75px;
     display: none;
+}
+
+.page_response .content .score_50 {
+    margin-left: -62px;
+}
+.page_response .content .score_0 {
+    margin-left: -52px;
 }
 .page_response .content .showing {
     display: block;
