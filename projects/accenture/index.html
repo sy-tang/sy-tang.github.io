@@ -431,7 +431,7 @@
 
         var ctlBtns = $(".fixed_block"), navBtn = $(".nav_btn");
 
-        var pages = $(".page"), runPage, pageCursor = 0;
+        var pages = $(".page"), runPage, pageCursor = 0, swipeEnable = false;
 
         runPage = new FullPage({
 
@@ -463,7 +463,7 @@
                   $pages.eq(pageCursor).find(".contain.hide").removeClass("hide")
                     .siblings().addClass("hide");
                } 
-               
+               swipeEnable = false;
              }
         });
 
@@ -502,6 +502,7 @@
             var page = pages.eq(runPage.thisPage());
             page.find(".contain").eq(0).addClass("hide");
             page.find(".contain").eq(1).removeClass("hide");
+            swipeEnable = true;
         });
 
 
