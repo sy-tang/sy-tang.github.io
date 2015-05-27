@@ -144,8 +144,8 @@ body {
     background: rgba(0, 0, 0, .8);
     color: white;
     right: 0;
-    top: 44px;
-    padding: 20px;
+    top: 0;
+    padding: 0 20px;
     right: -190px;
     transition: all .8s ease;
     -webkit-transition: all .8s ease;
@@ -166,7 +166,7 @@ body {
     background: url(../img/guide_btn.png) no-repeat center center;
     background-size: 58px;
     position: absolute;
-    bottom: 18%;
+    bottom: 8%;
     left: -58px;
 }
 
