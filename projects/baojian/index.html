@@ -49,7 +49,7 @@
         <div class="page page_question">
             <div class="contain">
                 <div class="title">大保健传奇</div>
-                <img src="img/title_01.png" alt="" class="question_no">
+                <img src="img/title_02.png" alt="" class="question_no">
                 <div class="question">
                     数字化商业时代，传统行业寻找合适切入点至关重要，没有产品经理的产品最终都和IE浏览器一个下场。为了更好地给顾客提供大保健服务，你选择：
                 </div>
@@ -70,7 +70,7 @@
         <div class="page page_question">
             <div class="contain">
                 <div class="title">大保健传奇</div>
-                <img src="img/title_01.png" alt="" class="question_no">
+                <img src="img/title_03.png" alt="" class="question_no">
                 <div class="question">
                     经过你的一番努力，公司在业内已小有名气，人称京城保健业“全聚德”，为了布局“大健康”事业，你心里盘算该着手下一步了：            
                 </div>
@@ -91,7 +91,7 @@
         <div class="page page_question">
             <div class="contain">
                 <div class="title">大保健传奇</div>
-                <img src="img/title_01.png" alt="" class="question_no">
+                <img src="img/title_04.png" alt="" class="question_no">
                 <div class="question">
                     用户信息的收集和反馈太单一了，这点信息量居委会大妈都能分分钟搞定，怎么才能获取更及时和全面的大数据呢？            
                 </div>
@@ -112,7 +112,7 @@
         <div class="page page_question">
             <div class="contain">
                 <div class="title">大保健传奇</div>
-                <img src="img/title_01.png" alt="" class="question_no">
+                <img src="img/title_05.png" alt="" class="question_no">
                 <div class="question">
                     数据量嗖嗖地增加，信息全面又及时，眼看着“大健康”愿景就要实现了，面对公司的各项业务，该选哪个做大做强呢：            
                 </div>
@@ -133,7 +133,7 @@
         <div class="page page_question">
             <div class="contain">
                 <div class="title">大保健传奇</div>
-                <img src="img/title_01.png" alt="" class="question_no">
+                <img src="img/title_06.png" alt="" class="question_no">
                 <div class="question">
                     谋划新业务的同时，也不能忘记提升客户服务，怎么在做大保健的同时逐步向客户渗透“大健康”的宏伟蓝图呢：            
                 </div>
@@ -154,7 +154,7 @@
         <div class="page page_question">
             <div class="contain">
                 <div class="title">大保健传奇</div>
-                <img src="img/title_01.png" alt="" class="question_no">
+                <img src="img/title_07.png" alt="" class="question_no">
                 <div class="question">
                     现在数字化的智慧大保健企业已经基本部署完成，可是除了智能手环之外，离全产业链还相去甚远，是时候大踏步迈进“大健康”领域了：            
                 </div>
@@ -175,7 +175,7 @@
         <div class="page page_question">
             <div class="contain">
                 <div class="title">大保健传奇</div>
-                <img src="img/title_01.png" alt="" class="question_no">
+                <img src="img/title_08.png" alt="" class="question_no">
                 <div class="question">
                     迈入大健康领域后，业务拓展速度快，大保健APP的客户数也激增，理疗师已经抱怨光靠双手劳动，工作量太大。面对技师服务质量下降，客户威胁泼油漆抗议的险境，你应该：            
                 </div>
@@ -193,11 +193,12 @@
             </div>
         </div>
 
-        <div class="page page_result">
+        <div class="page page_result low_score">
             <div class="contain">
-                <img src="img/result_01.jpg" alt="" class="content result_low">
-                <img src="img/result_02.jpg" alt="" class="content result_middle">
-                <img src="img/result_03.jpg" alt="" class="content result3_high">
+                <img src="img/result_low.jpg" alt="" class="content result_low">
+                <img src="img/result_middle.jpg" alt="" class="content result_middle">
+                <img src="img/result_high.jpg" alt="" class="content result3_high">
+                <p class="score">110万</p>
                 <div class="replay_btn"></div>
                 <a href="http://eqxiu.com/s/htt0jPgS" class="link1"></a>
                 <a href="http://eqxiu.com/s/htt0jPgS" class="link2"></a>
@@ -208,6 +209,9 @@
     <div class="page page_response">
         <div class="content">
             <img src="img/response_bg.png"/>
+            <img src="img/score_200.png" alt="" class="score_icon score_200">
+            <img src="img/score_50.png" alt="" class="score_icon score_50">
+            <img src="img/score_0.png" alt="" class="score_icon score_0">
             <p class="hint"></p>
             <div class="return_btn">返回重新选</div>
             <div class="next_btn">下一题</div>
@@ -260,7 +264,7 @@
              }
         });
 
-        // runPage.go(2);
+        runPage.go(10);
 
         $(".guide_btn").on("click", function() { 
             $(".guide").toggleClass("show");
@@ -289,12 +293,15 @@
         $("#pageContain").on("click", ".answer li", function() {
             var score = $(this).data("score");
             var hint = "";
+
+            $pageResponse.find(".score_icon.showing").removeClass("showing");
+
             if (score < 0) {
                 hint = $(this).data("hint");
                 $pageResponse.addClass("negative");
 
             } else {
-                hint = "+ " + score + "万";
+                $pageResponse.find(".score_" + score).addClass("showing");
                 totalScore += score;
                 $pageResponse.removeClass("negative");
 
@@ -326,11 +333,13 @@
             } else {
                 $pageResult.addClass("middle_score");
             }
+            $pageResult.find(".score").text(totalScore + "万");
             runPage.next();
         })
 
         $pageResult.on("click", ".replay_btn", function() {
             $pageResponse.removeClass("finished");
+            $pageResult.removeClass("low_score high_score middle_score");
             totalScore = 0;
             runPage.go(2);
         });

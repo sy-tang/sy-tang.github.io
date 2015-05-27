@@ -199,6 +199,7 @@ body {
     color: #898989;
     font-size: 14px;
     top: 21%;
+    font-weight: normal;
 }
 
 .page_response .return_btn,
@@ -232,6 +233,18 @@ body {
     display: block;
 }
 
+.page_response .content .score_icon {
+    position: absolute;
+    height: 35px;
+    width: auto;
+    top: 34%;
+    left: 26%;
+    display: none;
+}
+.page_response .content .showing {
+    display: block;
+}
+
 .page_result .replay_btn {
     position: absolute;
     width: 30%;
@@ -239,6 +252,16 @@ body {
     top: 58%;
     left: 35%;
     /*border: 1px solid #ccc;*/
+}
+.page_result .score {
+    color: #ccc;
+    position: absolute;
+    width: 30%;
+    top: 24.5%;
+    left: 36%;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
 }
 .page_result a {
     position: absolute;
