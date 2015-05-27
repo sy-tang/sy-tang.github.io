@@ -13,7 +13,7 @@
   </head>
   <body>
     <div id="pageContain">
-    	 <div class="page page_start">
+    	<div class="page page_start">
             <div class="contain">
                 <img class="title animated" src="img/main_title3.png" alt="">
                 <img class="logo animated" src="img/logo.png" alt="">
@@ -413,6 +413,7 @@
         </div>
 	    
         <div class="page page_end">
+            <div class="nav_btn"></div>
             <div class="contain">
                 <img class="title" src="img/main_title3.png" alt="">
                 <img src="img/page_end_text.png" alt="" class="content">
@@ -430,7 +431,7 @@
 
         var ctlBtns = $(".fixed_block"), navBtn = $(".nav_btn");
 
-        var pages = $(".page"), runPage, swipeEnable = false;
+        var pages = $(".page"), runPage, pageCursor = 0;
 
         runPage = new FullPage({
 
@@ -458,12 +459,11 @@
             //    return 'stop';
             //  }
              ,callback : function(index, thisPage) {       // callback when pageChange
-               if (index > 1) {
-                    ctlBtns.show();
-               } else {
-                    ctlBtns.hide();
-               }
-               swipeEnable = false;
+               if (pageCursor > 1) {
+                  $pages.eq(pageCursor).find(".contain.hide").removeClass("hide")
+                    .siblings().addClass("hide");
+               } 
+               
              }
         });
 
@@ -502,7 +502,6 @@
             var page = pages.eq(runPage.thisPage());
             page.find(".contain").eq(0).addClass("hide");
             page.find(".contain").eq(1).removeClass("hide");
-            swipeEnable = true;
         });
 
 
