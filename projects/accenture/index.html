@@ -31,7 +31,7 @@
                     <a class="nav_anchor anchor3" data-page="4"></a>
                     <a class="nav_anchor anchor4" data-page="5"></a>
                     <a class="nav_anchor anchor5" data-page="6"></a>
-                    <a class="anchor6" target="_blank" href="http://promote.caixin.com/upload/accenture2015/Technology%20Vision.pdf"></a>
+                    <a class="anchor6" target="_blank" href="http://promote.caixin.com/upload/accenture2015_m.pdf"></a>
                 </div>
 	        </div>
 	    </div>
@@ -469,7 +469,7 @@
 
         // runPage.go(6);
 
-        navBtn.on("click", function() {
+        navBtn.on("touchstart", function() {
             runPage.go(1);
         });
 
@@ -484,7 +484,7 @@
         });
 
         $(".download_btn").on("click", function() {
-            var link = "http://promote.caixin.com/upload/accenture2015/Technology%20Vision" + (runPage.thisPage() - 1) + ".pdf";
+            var link = "http://promote.caixin.com/upload/accenture2015_m.pdf";
             console.log(link);
             window.open(link);
         });
