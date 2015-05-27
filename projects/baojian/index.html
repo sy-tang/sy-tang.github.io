@@ -109,7 +109,12 @@
 
         $(".guide_btn").on("click", function() { 
             $(".guide").toggleClass("show");
+            return false;
         });
+
+        $(".page_question").on("click", function() {
+            $(".guide").removeClass("show");
+        })
 
         $(".start_btn").on("click", function() {
             runPage.next();
