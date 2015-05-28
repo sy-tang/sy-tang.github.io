@@ -61,7 +61,6 @@ body {
     margin: 4% auto 3%;
     /*padding-right: 20px;*/
 }
-
 .current .contain, .slide .contain {
 	display: block;
 }
@@ -80,6 +79,9 @@ body {
     -webkit-transition-duration: 0ms !important;
 }
 
+.page_question {
+    background: #EEEFEF;
+}
 .page_question .title {
     width: 100%;
     padding: 10px 0;
