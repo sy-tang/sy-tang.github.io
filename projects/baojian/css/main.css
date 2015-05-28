@@ -118,7 +118,7 @@ body {
 
 .page_question .question_no {
     width: 175px;
-    margin: 6% auto;
+    margin: 4% auto;
     /*padding-right: 20px;*/
 }
 
@@ -176,7 +176,7 @@ body {
     background: url(../img/guide_btn.png) no-repeat center center;
     background-size: 58px;
     position: absolute;
-    bottom: 2%;
+    bottom: 4%;
     left: -58px;
 }
 
