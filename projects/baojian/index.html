@@ -138,7 +138,7 @@
                     谋划新业务的同时，也不能忘记提升客户服务，怎么在做大保健的同时逐步向客户渗透“大健康”的宏伟蓝图呢：            
                 </div>
                 <ul class="answer">
-                    <li data-score="50">大保健都上门服务了，客户那些买药送药的需求，也一并做了吧；（</li>
+                    <li data-score="50">大保健都上门服务了，客户那些买药送药的需求，也一并做了吧</li>
                     <li data-score="200">用户大保健的目标还是为了健康，为用户量身定制个人健康计划，跟踪健康状态，及时推送保健信息和理疗提醒，从吃穿健身，乃至喘气，咱全包了</li>
                     <li data-score="-1" data-hint="大保健交流会，那就是病友联谊会吗？!">现在做什么都要Social，组织个大保健线下交流会</li>
                 </ul>
@@ -221,7 +221,6 @@
     </div>
     
     <script type="text/javascript" src="js/zepto.min.js"></script>
-    <script type="text/javascript" src="js/fastclick.min.js"></script>
     <script type="text/javascript" src="js/fullPage.min.js"></script>
     <script type="text/javascript">
 
@@ -229,9 +228,12 @@
             $("#pageContain").show();
         });
 
-        // $(function() {
-        //     FastClick.attach(document.body);
-        // });
+        var u = navigator.userAgent, app = navigator.appVersion;
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        var reportLink = isiOS ? "http://promote.caixin.com/upload/accenture2015_m.pdf" :
+                        "http://promote.caixin.com/2015/accenture_technology_vision/index.html";
+
+        $(".page_result .link1").attr("href", reportLink);
 
         var runPage;
 

@@ -425,6 +425,13 @@
     <script type="text/javascript" src="js/fullPage.min.js"></script>
     <script type="text/javascript">
 
+        var u = navigator.userAgent, app = navigator.appVersion;
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        var reportLink = isiOS ? "http://promote.caixin.com/upload/accenture2015_m.pdf" :
+                        "http://promote.caixin.com/2015/accenture_technology_vision/index.html";
+
+        $(".anchor6").attr("href", reportLink);
+
         Pace.on("done", function() {
             $("#pageContain").show();
         });
@@ -485,10 +492,7 @@
         });
 
         $(".download_btn").on("click", function() {
-            // var link = "http://promote.caixin.com/upload/accenture2015_m.pdf";
-            // console.log(link);
-            // window.open(link);
-            window.location.href = "http://promote.caixin.com/2015/accenture_technology_vision/index.html";
+            window.open(reportLink);
         });
 
         $("#pageContain").on("click", ".slide_btn", function() {
