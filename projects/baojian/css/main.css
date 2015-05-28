@@ -159,6 +159,7 @@ body {
     right: -190px;
     transition: all .8s ease;
     -webkit-transition: all .8s ease;
+    z-index: 100;
 }
 
 .page_question .show.guide {
