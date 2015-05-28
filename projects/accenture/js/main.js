@@ -40,6 +40,7 @@ var wxCallbacks = {
 };
 // 自定义分享到：微信好友、朋友圈、腾讯微博、QQ好友
 WeixinApi.share(wxData,wxCallbacks);
+WeixinApi.enableDebugMode();
 
 
 var u = navigator.userAgent, app = navigator.appVersion;
