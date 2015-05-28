@@ -80,7 +80,7 @@ body {
     height: 101px;
     position: absolute;
     left: 0;
-    bottom: 1.5%;
+    bottom: 1%;
     background: url(../img/score_counter.png) no-repeat center center;
     background-size: 198px;
     color: #FC8653;
@@ -140,7 +140,7 @@ body {
     margin: 0 auto 3.5%;
     color: white;
     background: #64C4D0;
-    padding: 10px 15px;
+    padding: 6px 15px;
     border-radius: 20px;
     width: 80%;
     box-shadow: 0 2px 0px #416D7F;
@@ -176,7 +176,7 @@ body {
     background: url(../img/guide_btn.png) no-repeat center center;
     background-size: 58px;
     position: absolute;
-    bottom: 4%;
+    bottom: 3.5%;
     left: -58px;
 }
 
@@ -189,6 +189,7 @@ body {
 
     .page_question .answer li {
         font-size: 16px;
+        padding: 10px 15px;
     }
 
     .page_question .guide_btn {
@@ -204,6 +205,7 @@ body {
 
     .page_question .answer li {
         font-size: 16px;
+        padding: 10px 15px;
     }
 
     .page_question .guide_btn {
