@@ -140,7 +140,7 @@
                 <ul class="answer">
                     <li data-score="50">大保健都上门服务了，用户那些买药送药的需求，也一并做了吧</li>
                     <li data-score="200">用户做保健的目标还是为了健康，为用户量身定制个人健康计划，跟踪健康状态，及时推送保健信息和理疗提醒，从吃穿健身，乃至喘气，咱全包了</li>
-                    <li data-score="-1" data-hint="大保健交流会，那就是病友联谊会吗？!">现在做什么都要Social，组织全国各地的大保健线下交流会吧（</li>
+                    <li data-score="-1" data-hint="大保健交流会，那就是病友联谊会吗？!">现在做什么都要Social，组织全国各地的大保健线下交流会吧</li>
                 </ul>
                 <div class="guide">
                     <div class="guide_btn"></div>
@@ -219,6 +219,8 @@
             <div class="finish_btn">查看收益</div>
         </div>
     </div>
+
+    <div class="score_counter"><p>0</p></div>
     
     <script type="text/javascript" src="js/zepto.min.js"></script>
     <script type="text/javascript" src="js/fullPage.min.js"></script>
@@ -235,6 +237,7 @@
 
         $(".page_result .link1").attr("href", reportLink);
 
+        var $scoreCounter = $(".score_counter");
         var runPage;
 
         runPage = new FullPage({
@@ -263,7 +266,9 @@
             //    return 'stop';
             //  }
              ,callback : function(index, thisPage) {       // callback when pageChange
-               
+                if (index > 1 && index < 10) {
+                    $scoreCounter.addClass("showing");
+                }  
              }
         });
 
@@ -306,6 +311,7 @@
             } else {
                 $pageResponse.find(".score_" + score).addClass("showing");
                 totalScore += score;
+                $scoreCounter.find("p").text(totalScore);
                 $pageResponse.removeClass("negative");
 
                 // last question
@@ -337,6 +343,7 @@
                 $pageResult.addClass("middle_score");
             }
             $pageResult.find(".score").text(totalScore + "万");
+            $scoreCounter.removeClass("showing");
             runPage.next();
         });
 
@@ -344,6 +351,7 @@
             $pageResponse.removeClass("finished");
             $pageResult.removeClass("low_score high_score middle_score");
             totalScore = 0;
+            $scoreCounter.find("p").text(totalScore);
             runPage.go(2);
         });
 
