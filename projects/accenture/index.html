@@ -31,7 +31,8 @@
                     <a class="nav_anchor anchor3" data-page="4"></a>
                     <a class="nav_anchor anchor4" data-page="5"></a>
                     <a class="nav_anchor anchor5" data-page="6"></a>
-                    <a class="anchor6" target="_blank" href="http://promote.caixin.com/upload/accenture2015_m.pdf"></a>
+                    <!-- <a class="anchor6" target="_blank" href="http://promote.caixin.com/upload/accenture2015_m.pdf"></a> -->
+                    <a class="anchor6" target="_blank" href="report.html"></a>
                 </div>
 	        </div>
 	    </div>
@@ -487,7 +488,8 @@
         $(".download_btn").on("click", function() {
             var link = "http://promote.caixin.com/upload/accenture2015_m.pdf";
             console.log(link);
-            window.open(link);
+            // window.open(link);
+            window.location.href = link;
         });
 
         $("#pageContain").on("click", ".slide_btn", function() {
