@@ -165,7 +165,7 @@ body {
     right: 0;
     top: 0;
     padding: 0 20px;
-    right: -190px;
+    right: -180px;
     transition: all .8s ease;
     -webkit-transition: all .8s ease;
     z-index: 100;
@@ -411,6 +411,7 @@ body {
 
     .page_question .guide {
         width: 150px;
+        right: -190px;
     }
     .page_question .question {
         margin-bottom: 5%;
