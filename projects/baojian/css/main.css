@@ -195,66 +195,6 @@ body {
     -webkit-transition: all .8s ease;
 }
 
-@media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
-    /*iphone 6*/
-
-    .page_question .guide {
-        width: 150px;
-    }
-    .page_question .question {
-        margin-bottom: 5%;
-        font-size: 18px;
-    }
-
-    .page_question .answer li {
-        font-size: 16px;
-        padding: 10px 15px;
-    }
-
-    .page_question .guide_btn {
-        bottom: 4%;
-    }
-
-    .score_counter {
-        width: 185px;
-        height: 94px;
-        bottom: 2.5%;
-        background: url(../img/score_counter3.png) no-repeat center center;
-        background-size: 185px;
-    }
-
-    .score_counter p {
-          top: 27px;
-          left: 24%;
-          width: 68px;
-          font-size: 28px;
-    }
-}
-@media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){
-    /*iphone 6 plus*/
-
-    .page_question .question_no {
-        margin: 7% auto;
-    }
-
-    .page_question .question {
-        margin-bottom: 5%;
-        font-size: 18px;
-    }
-
-    .page_question .answer li {
-        font-size: 16px;
-        padding: 10px 15px;
-    }
-
-    .page_question .guide_btn {
-        bottom: 6%;
-    }
-    .score_counter {
-        bottom: 4.5%;
-
-    }
-}
 
 /*.page_start .content {
     position: absolute;
@@ -456,6 +396,77 @@ body {
     bottom: 10%;
     left: 50%;
     margin-left: -25%;
+}
+
+
+
+@media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
+    /*iphone 6*/
+
+    .page_result .score {
+        font-size: 22px;
+    }
+
+    .page_question .guide {
+        width: 150px;
+    }
+    .page_question .question {
+        margin-bottom: 5%;
+        font-size: 18px;
+    }
+
+    .page_question .answer li {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .page_question .guide_btn {
+        bottom: 4%;
+    }
+
+    .score_counter {
+        width: 185px;
+        height: 94px;
+        bottom: 2.5%;
+        background: url(../img/score_counter3.png) no-repeat center center;
+        background-size: 185px;
+    }
+
+    .score_counter p {
+          top: 27px;
+          left: 24%;
+          width: 68px;
+          font-size: 28px;
+    }
+}
+@media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){
+    /*iphone 6 plus*/
+
+    .page_result .score {
+        font-size: 22px;
+    }
+
+    .page_question .question_no {
+        margin: 7% auto;
+    }
+
+    .page_question .question {
+        margin-bottom: 5%;
+        font-size: 18px;
+    }
+
+    .page_question .answer li {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .page_question .guide_btn {
+        bottom: 6%;
+    }
+    .score_counter {
+        bottom: 4.5%;
+
+    }
 }
 
 
