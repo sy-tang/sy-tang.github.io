@@ -76,13 +76,13 @@ body {
 }
 
 .score_counter {
-    width: 205px;
-    height: 105px;
+    width: 150px;
+    height: 76px;
     position: absolute;
     left: 0;
-    bottom: 1%;
-    background: url(../img/score_counter.png) no-repeat center center;
-    background-size: 205px;
+    bottom: 3%;
+    background: url(../img/score_counter2.png) no-repeat center center;
+    background-size: 150px;
     color: #FC8653;
     z-index: 99;
     transition: all .8s ease;
@@ -95,11 +95,18 @@ body {
 }
 
 .score_counter p {
-    position: absolute;
+/*    position: absolute;
   top: 34px;
   left: 30%;
   width: 68px;
   font-size: 26px;
+  font-weight: bold;
+  text-align: center;*/
+  position: absolute;
+  top: 21px;
+  left: 22%;
+  width: 64px;
+  font-size: 22px;
   font-weight: bold;
   text-align: center;
 }
@@ -149,7 +156,7 @@ body {
 
 .page_question .guide {
     position: absolute;
-    width: 150px;
+    width: 140px;
     height: 100%;
     background: rgba(0, 0, 0, .8);
     color: white;
@@ -166,6 +173,10 @@ body {
     right: 0;
 }
 
+.page_question .show.guide .guide_btn {
+    opacity: 0;
+}
+
 .page_question .guide p {
     position: absolute;
     top : 30%;
@@ -179,10 +190,17 @@ body {
     position: absolute;
     bottom: 3.5%;
     left: -58px;
+    opacity: 1;
+    transition: all .8s ease;
+    -webkit-transition: all .8s ease;
 }
 
 @media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
     /*iphone 6*/
+
+    .page_question .guide {
+        width: 150px;
+    }
     .page_question .question {
         margin-bottom: 5%;
         font-size: 18px;
@@ -198,7 +216,18 @@ body {
     }
 
     .score_counter {
-        bottom: 2%;
+        width: 185px;
+        height: 94px;
+        bottom: 2.5%;
+        background: url(../img/score_counter3.png) no-repeat center center;
+        background-size: 185px;
+    }
+
+    .score_counter p {
+          top: 27px;
+          left: 24%;
+          width: 68px;
+          font-size: 28px;
     }
 }
 @media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){
@@ -207,7 +236,7 @@ body {
     .page_question .question_no {
         margin: 7% auto;
     }
-    
+
     .page_question .question {
         margin-bottom: 5%;
         font-size: 18px;
@@ -222,7 +251,8 @@ body {
         bottom: 6%;
     }
     .score_counter {
-        bottom: 4%;
+        bottom: 4.5%;
+
     }
 }
 
