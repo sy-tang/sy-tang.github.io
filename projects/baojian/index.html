@@ -51,7 +51,7 @@
                 <div class="title">大保健传奇</div>
                 <img src="img/title_02.png" alt="" class="question_no">
                 <div class="question">
-                    数字化商业时代，传统行业寻找合适切入点至关重要，没有产品经理的产品最终都和IE浏览器一个下场。为了更好地给顾客提供大保健服务，你选择：
+                    数字化商业时代，传统行业寻找合适切入点至关重要，为了更好地给顾客提供大保健服务，你选择：
                 </div>
                 <ul class="answer">
                     <li data-score="200">招聘程序猿neng个APP，广发理疗师英雄帖，开展上门保健理疗O2O业务</li>
@@ -61,7 +61,7 @@
                 <div class="guide">
                     <div class="guide_btn"></div>
                     <p>
-                        依托互联网，传统服务业与制造业将不再孤军奋战，瞄准机会，逃离信息孤岛，赶快踏上数字化技术的列车为消费者打造更广阔的体验空间吧！
+                        依托互联网，传统服务业与制造业将不再孤军奋战，瞄准机会，赶快踏上数字化技术的列车为消费者打造更广阔的体验空间吧！
                     </p>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                 <ul class="answer">
                     <li data-score="200">用户资料能发掘不少“健康问题”，未来拓展业务全靠它，听说大数据很厉害，赶紧系统规划起来</li>
                     <li data-score="-1" data-hint="边吃包子边大保健，你们城里人可真会玩，感受到用户的白眼了吗!">跨界合作，与表哥的互联网思维包子铺联手，做大保健送包子，人家想想还有点小激动呢</li>
-                    <li data-score="50">招募微信营销“心机婊”，，找俩自媒体大佬，软文刷屏一夜上头条</li>
+                    <li data-score="50">招募微信营销“心机婊”，找俩自媒体大佬，软文刷屏一夜上头条</li>
                 </ul>
                 <div class="guide">
                     <div class="guide_btn"></div>
@@ -156,12 +156,12 @@
                 <div class="title">大保健传奇</div>
                 <img src="img/title_07.png" alt="" class="question_no">
                 <div class="question">
-                    现在数字化的智慧大保健企业已经基本部署完成，可是除了智能手环之外，离全产业链还相去甚远，是时候大踏步迈进“大健康”领域了：            
+                    智慧大保健初具规模，可除了智能手环之外，离全产业链还相去甚远，怎么大踏步迈进“大健康”领域呢？            
                 </div>
                 <ul class="answer">
-                    <li data-score="50">有钱，任性！体检连锁机构、药房、健身房和营养配餐中心统统买买买，成为自己的产业链，传播健康理念，全面共赢</li>
-                    <li data-score="-1" data-hint="医药行业门槛怎么可能这么低，你做的保健品能吃么？没有行医执照你就是江湖郎中!">自主开发保健品，在没有大保健的日子里，药不能停，祝您日日安康</li>
-                    <li data-score="500">约约约！赶紧找我那些隐匿在医疗、保健、疾病研究等数字化进程中的小伙伴，一起愉快玩耍，完善线上线下全产业链，共同推进全民健康大事业</li>
+                    <li data-score="50">有钱，任性！体检连锁、药房、健身房统统买买买，化敌为友，全面共赢</li>
+                    <li data-score="-1" data-hint="医药行业门槛怎么可能这么低，你做的保健品能吃么？没有行医执照你就是江湖郎中!">自主开发保健品，药不能停！用户都说：我也用大~宝~剑~</li>
+                    <li data-score="500">约约约！那些隐匿在医疗、保健、疾病研究数字化进程中的小伙伴，快来共同推进全民健康大业</li>
                 </ul>
                 <div class="guide">
                     <div class="guide_btn"></div>
@@ -220,7 +220,7 @@
         </div>
     </div>
 
-    <div class="score_counter"><p>0</p></div>
+    <div class="score_counter"><p>200</p></div>
     
     <script type="text/javascript" src="js/zepto.min.js"></script>
     <script type="text/javascript" src="js/fullPage.min.js"></script>
@@ -293,7 +293,7 @@
         });
 
         // 答题相关
-        var totalScore = 0, 
+        var totalScore = 200, 
             $pageResponse = $(".page_response"), 
             $pageResult = $(".page_result"),
             $hint = $pageResponse.find(".hint");
@@ -350,7 +350,7 @@
         $pageResult.on("click", ".replay_btn", function() {
             $pageResponse.removeClass("finished");
             $pageResult.removeClass("low_score high_score middle_score");
-            totalScore = 0;
+            totalScore = 200;
             $scoreCounter.find("p").text(totalScore);
             runPage.go(2);
         });
