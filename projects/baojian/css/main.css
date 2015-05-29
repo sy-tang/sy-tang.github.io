@@ -76,13 +76,13 @@ body {
 }
 
 .score_counter {
-    width: 198px;
-    height: 101px;
+    width: 205px;
+    height: 105px;
     position: absolute;
     left: 0;
     bottom: 1%;
     background: url(../img/score_counter.png) no-repeat center center;
-    background-size: 198px;
+    background-size: 205px;
     color: #FC8653;
     z-index: 99;
     transition: all .8s ease;
@@ -99,7 +99,7 @@ body {
   top: 34px;
   left: 30%;
   width: 68px;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   text-align: center;
 }
@@ -196,9 +196,18 @@ body {
     .page_question .guide_btn {
         bottom: 4%;
     }
+
+    .score_counter {
+        bottom: 2%;
+    }
 }
 @media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){
     /*iphone 6 plus*/
+
+    .page_question .question_no {
+        margin: 7% auto;
+    }
+    
     .page_question .question {
         margin-bottom: 5%;
         font-size: 18px;
@@ -211,6 +220,9 @@ body {
 
     .page_question .guide_btn {
         bottom: 6%;
+    }
+    .score_counter {
+        bottom: 4%;
     }
 }
 
