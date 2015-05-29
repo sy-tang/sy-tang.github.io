@@ -85,6 +85,7 @@ body {
     background-size: 150px;
     color: #FC8653;
     z-index: 99;
+    opacity: 0;
     transition: all .8s ease;
     -webkit-transition: all .8s ease;
     -webkit-transform: translate(-100%, 0);
@@ -92,6 +93,7 @@ body {
 
 .score_counter.showing {
     -webkit-transform: translate(0, 0);
+    opacity: 1;
 }
 
 .score_counter p {
