@@ -8,23 +8,29 @@ $("#country-statics").slick({
     // 'dots': true,
     'infinite': false,
 });
-
-$("html body").css("overflow", "hidden");
+var noScroll = true;
+$("body").on('touchmove', function (event) {
+    if (noScroll) 
+        event.preventDefault();
+});
 
 
 $(".start-btn").on("click", function() {
     $("#cover").addClass("gone");
     $("html body").css("overflow", "scroll");
+    noScroll = false;
 });
 
 $(".next-btn").on("click", function() {
     $("#back-cover").removeClass("gone");
     $("html body").css("overflow", "hidden");
+    noScroll = true;
 });
 
 $(".back-btn").on("click", function() {
     $("#back-cover").addClass("gone");
     $("html body").css("overflow", "scroll");
+    noScroll = false;
 });
 
 function loadAllOtherData() {
