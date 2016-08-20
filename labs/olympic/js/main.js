@@ -9,19 +9,22 @@ $("#country-statics").slick({
     'infinite': false,
 });
 
+$("html body").css("overflow", "hidden");
+
+
 $(".start-btn").on("click", function() {
     $("#cover").addClass("gone");
-    $("body").css("overflow-y", "visible");
+    $("html body").css("overflow", "scroll");
 });
 
 $(".next-btn").on("click", function() {
     $("#back-cover").removeClass("gone");
-    $("body").css("overflow", "hidden");
+    $("html body").css("overflow", "hidden");
 });
 
 $(".back-btn").on("click", function() {
     $("#back-cover").addClass("gone");
-    $("body").css("overflow-y", "visible");
+    $("html body").css("overflow", "scroll");
 });
 
 function loadAllOtherData() {
