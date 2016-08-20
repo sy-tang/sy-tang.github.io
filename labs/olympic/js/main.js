@@ -17,7 +17,8 @@ $("body").on('touchmove', function (event) {
 
 $(".start-btn").on("click", function() {
     $("#cover").addClass("gone");
-    $("html body").css("overflow", "scroll");
+    $("html body").css("overflow-y", "scroll");
+    $("html body").css("overflow-x", "hidden");
     noScroll = false;
 });
 
@@ -29,7 +30,8 @@ $(".next-btn").on("click", function() {
 
 $(".back-btn").on("click", function() {
     $("#back-cover").addClass("gone");
-    $("html body").css("overflow", "scroll");
+    $("html body").css("overflow-y", "scroll");
+    $("html body").css("overflow-x", "hidden");
     noScroll = false;
 });
 
