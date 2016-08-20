@@ -1,0 +1,23 @@
+{
+  "name": "olympic",
+  "authors": [
+    "tangshuyuan <tangziyuan@haizhi.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "js-xlsx": "~0.8.0",
+    "slick-carousel": "~1.6.0"
+  }
+}

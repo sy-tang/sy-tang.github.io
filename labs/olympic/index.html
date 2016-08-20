@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/flags.css">
+</header>
+<body>
+	<body>
+        <div id="cover">
+            <!-- <img src="images/wave.gif" class="wave"/> -->
+            <img src="images/cover.jpg" />
+            <div class="start-btn"></div>
+        </div>
+
+        <div id="back-cover" class="gone">
+            <!-- <img src="images/wave.gif" class="wave"/> -->
+            <img src="images/back_cover.jpg" />
+            <div class="back-btn"></div>
+            <a class="link" href="https://me.bdp.cn/home.html?pst=olympics"></a>
+        </div>
+        
+        <div id="header">
+            <div class="next-btn"></div>
+            <div class="block">
+                <h2>获得金牌的国家分布</h2>
+                <div id="worldmap" class="chart-block"></div>
+            </div>
+            <div class="filter">
+                <span class="filter-btn"></span>
+                <span class="filter-value unset">
+                    <span class="text"></span>
+                    <i class="flag18"></i>
+                    <span class="hint">选择国家</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="main" id="country-statics">
+            <div class="block">
+                <h2><span class="country nowrap"></span> 夺金项目排行 - 总金牌数：<span class="total"></span></h2>
+                <div id="countryDetail" class="chart-block"></div>
+                <div class="zero">0</div> 
+            </div>
+            <div class="block">
+                <h2><span class="country nowrap"></span> 夺金项目排行 - 总金牌数：<span class="total"></span></h2>
+                <div id="heatmap" class="chart-block"></div>
+                <div class="zero">0</div> 
+            </div>
+<!--             <div class="block">
+                <h2>1896-2012年在各项运动的夺金情况</h2>
+                <div class="drill-down">&gt;&gt;返回</div>
+                <div id="parallel" class="chart-block"></div>
+            </div> -->
+        </div>
+
+        <div class="main" id="world-statics">
+            <div class="block">
+                <h2>历届金牌榜首国家</h2>
+                <div id="topCountryCount" class="chart-block"></div>
+            </div>
+            <div class="block">
+                <h2>总金牌榜Top 10</h2>
+                <div id="topCountries" class="chart-block"></div>
+            </div>
+        </div>
+        	    
+	</body>
+    <script src="js/libs/echarts.min.js"></script>
+    <script src="js/libs/echarts.world.js"></script>
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/alasql.min.js"></script>
+    <script src="js/libs/slick.min.js"></script>
+    <script src="js/ioc_iso_continent_code.js"></script>
+    <script src="js/translate.js"></script>
+    <script src="js/style.js"></script>
+    <script src="js/common.js"></script>
+    <!-- <script src="js/parallel_chart.js"></script> -->
+    <script src="js/allCountryStatics.js"></script>
+    <script src="js/topSports.js"></script>
+    <script src="js/topSportHeatmap.js"></script>
+    <script src="js/topCountries.js"></script>
+    <script src="js/worldmap.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
